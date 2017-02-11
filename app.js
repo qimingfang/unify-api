@@ -12,9 +12,9 @@ var app = express();
 //connect to our database
 //Ideally you will obtain DB details from a config file
 
-var dbName='cra';
+//var dbName='cra';
 
-var connectionString='mongodb://localhost:27017/'+dbName;
+var connectionString='mongodb://heroku_n0c64hvd:v7j7von8qb6i2on17hbn9tu1mi@ds011241.mlab.com:11241/heroku_n0c64hvd';
 
 mongoose.connect(connectionString);
 
