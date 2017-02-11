@@ -1,0 +1,18 @@
+USER
+---
+id: string
+name: string
+ref code: url?
+
+
+MERCHANT
+--------
+id: string
+name: string
+image: blob
+
+REFERALS
+--------
+customer id: string
+merchant id: string
+points: integer
