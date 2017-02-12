@@ -8,8 +8,9 @@ var router = express.Router();
 router.route('/referrals')
 	.get(function(req, res) {
 		Referrals.find(function(err, referrals) {
-			if (err)
-				res.send(err);
+			if (err) {
+				return res.send(err);
+			}
 			res.json(referrals);
 		});
 	})
@@ -17,8 +18,9 @@ router.route('/referrals')
 	.post(function(req, res) {
 		var referral = new Referrals(req.body);
 		referral.save(function(err) {
-			if (err)
-				res.send(err);
+			if (err) {
+				return res.send(err);
+			}
 			res.send({
 				message: 'Referrals Added'
 			});
@@ -28,7 +30,7 @@ router.route('/referrals')
 	.delete(function(req, res) {
 		Referrals.remove({}, function(err, referral) {
 			if (err)
-				res.send(err);
+				return res.send(err);
 
 			res.json({
 				message: 'Successfully deleted all referrals'
@@ -43,7 +45,7 @@ router.route('/referrals/:id')
 		}, function(err, referral) {
 
 			if (err)
-				res.send(err);
+				return res.send(err);
 
 			for (prop in req.body) {
 				referral[prop] = req.body[prop];
@@ -52,7 +54,7 @@ router.route('/referrals/:id')
 			// save the referral
 			referral.save(function(err) {
 				if (err)
-					res.send(err);
+					return res.send(err);
 
 				res.json({
 					message: 'Referrals updated!'
@@ -78,7 +80,7 @@ router.route('/referrals/:id')
 			_id: req.params.id
 		}, function(err, referral) {
 			if (err)
-				res.send(err);
+				return res.send(err);
 
 			res.json({
 				message: 'Successfully deleted'
