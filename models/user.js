@@ -2,6 +2,7 @@ var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 
 var userSchema=new Schema({
+    _id:'String',
     name:'String',
     referral:'String',
     image: 'String'
