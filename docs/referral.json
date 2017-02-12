@@ -1,5 +1,14 @@
 {
-    "customerID":"589f90fdabca42f424ed0402",
-    "merchantID":"589f8fdc768903802a1400e6",
-    "points":"9000"
+    "fromID": "589fcd8205c7c7000f790857",
+    "toID": "589fcd8805c7c7000f790858",
+    "merchantID":"589fde4a05c7c7000f79085a",
+    "points":"9000",
+    "status":"active"
+},
+{
+    "fromID": "589fcd8805c7c7000f790858",
+    "toID": "589fcd8205c7c7000f790857",
+    "merchantID":"589fde4a05c7c7000f79085a",
+    "points":"9000",
+    "status":"done"
 }

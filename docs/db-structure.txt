@@ -2,17 +2,20 @@ USER
 ---
 id: string
 name: string
-ref code: url?
+image: string
 
 
 MERCHANT
 --------
 id: string
 name: string
-image: blob
+image: string
 
-REFERALS
+
+REFERRALS
 --------
-customer id: string
-merchant id: string
-points: integer
+fromID: string
+toID: string
+merchantID: string
+points: string
+status: string
