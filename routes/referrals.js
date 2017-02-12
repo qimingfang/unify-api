@@ -21,6 +21,15 @@ router.route('/referrals')
                 res.send(err);
             res.send({message:'Referrals Added'});
         });
+    })
+
+    .delete(function(req,res){
+        Referrals.remove({}, function(err, referral) {
+            if (err)
+                res.send(err);
+
+            res.json({ message: 'Successfully deleted all referrals' });
+        });
     });
 
 router.route('/referrals/:id')
