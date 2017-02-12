@@ -2,8 +2,10 @@ var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 
 var referralSchema=new Schema({
-    customerID:'String',
     merchantID:'String',
+    fromID: 'String',
+    toID: 'String',
+    status: 'String',
     points:'String'
 });
 
